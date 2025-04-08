@@ -19,6 +19,15 @@ export interface MadeInUSABadgeProps {
   onClick?: () => void;
 }
 
+// Position classes (moved outside components to be accessible by both)
+const positionClasses = {
+  'top-left': 'top-2 left-2',
+  'top-right': 'top-2 right-2',
+  'bottom-left': 'bottom-2 left-2',
+  'bottom-right': 'bottom-2 right-2',
+  'center': 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+};
+
 const MadeInUSABadge: React.FC<MadeInUSABadgeProps> = ({
   style = 'standard',
   size = 'md',
@@ -35,15 +44,6 @@ const MadeInUSABadge: React.FC<MadeInUSABadgeProps> = ({
     sm: 'text-xs py-1 px-2',
     md: 'text-sm py-1.5 px-3',
     lg: 'text-base py-2 px-4',
-  };
-
-  // Position classes (for when badge is used in a positioned container)
-  const positionClasses = {
-    'top-left': 'top-2 left-2',
-    'top-right': 'top-2 right-2',
-    'bottom-left': 'bottom-2 left-2',
-    'bottom-right': 'bottom-2 right-2',
-    'center': 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
   };
 
   // Style classes
