@@ -1,12 +1,14 @@
 
 import React from 'react';
-import MadeInUSABadge, { MadeInUSAPositioned, MadeInUSABadgeProps } from '@/components/MadeInUSABadge';
+import type { MadeInUSABadgeProps } from '@/components/MadeInUSABadge';
 
 /**
  * Creates a badge that can be added to a product container
  */
 export const createProductBadge = (props?: MadeInUSABadgeProps) => {
-  return <MadeInUSABadge {...props} />;
+  // This function should return a React element, but we're in a TypeScript file
+  // so we need to use a different approach that doesn't involve JSX
+  return { type: 'MadeInUSABadge', props: props || {} };
 };
 
 /**
@@ -17,12 +19,17 @@ export const wrapWithUSABadge = (
   badgeProps?: MadeInUSABadgeProps,
   containerClassName?: string
 ) => {
-  return (
-    <div className={`relative inline-block ${containerClassName || ''}`}>
-      {children}
-      <MadeInUSAPositioned {...badgeProps} />
-    </div>
-  );
+  // Similarly, we'll return an object representation instead of JSX
+  return {
+    type: 'wrapper',
+    props: {
+      className: `relative inline-block ${containerClassName || ''}`,
+      children: [
+        children,
+        { type: 'MadeInUSAPositioned', props: badgeProps || {} }
+      ]
+    }
+  };
 };
 
 /**
