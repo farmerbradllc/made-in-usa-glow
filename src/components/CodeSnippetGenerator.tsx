@@ -31,8 +31,8 @@ const CodeSnippetGenerator: React.FC<CodeSnippetGeneratorProps> = ({ badgeConfig
   const getScriptCode = () => {
     return `
 <!-- Made in USA Badge - Add this to your website -->
-<link href="https://cdn.example.com/made-in-usa-badge.css" rel="stylesheet">
-<script src="https://cdn.example.com/made-in-usa-badge.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/made-in-usa-badge/assets@main/made-in-usa-badge.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/made-in-usa-badge/assets@main/made-in-usa-badge.js"></script>
 <script>
   // Initialize the badge
   window.MadeInUSA.init({
