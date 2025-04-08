@@ -20,7 +20,7 @@ interface MadeInUSASettings {
   defaultAnimated: boolean;
   defaultGlowing: boolean;
   defaultShowIcon: boolean;
-  defaultCustomText?: string;
+  defaultCustomText: string | undefined;
 }
 
 const defaultSettings: MadeInUSASettings = {

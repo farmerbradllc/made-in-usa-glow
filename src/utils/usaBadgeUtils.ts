@@ -1,25 +1,26 @@
 
-import React from 'react';
 import type { MadeInUSABadgeProps } from '@/components/MadeInUSABadge';
 
 /**
  * Creates a badge that can be added to a product container
  */
 export const createProductBadge = (props?: MadeInUSABadgeProps) => {
-  // This function should return a React element, but we're in a TypeScript file
-  // so we need to use a different approach that doesn't involve JSX
-  return { type: 'MadeInUSABadge', props: props || {} };
+  // Return a simulated element structure without using JSX
+  return { 
+    type: 'MadeInUSABadge', 
+    props: props || {} 
+  };
 };
 
 /**
  * Wraps an element (like a product image) with a positioned USA badge
  */
 export const wrapWithUSABadge = (
-  children: React.ReactNode,
+  children: any,
   badgeProps?: MadeInUSABadgeProps,
   containerClassName?: string
 ) => {
-  // Similarly, we'll return an object representation instead of JSX
+  // Return a simulated element structure without using JSX
   return {
     type: 'wrapper',
     props: {
@@ -120,7 +121,26 @@ export const generateBadgeCSS = (badgeProps?: MadeInUSABadgeProps): string => {
         border-radius: 9999px;
       `;
       break;
-    // Add other styles...
+    case 'ribbon':
+      styleCSS = `
+        background-color: #BF0A30;
+        color: white;
+        border-radius: 0 4px 4px 0;
+      `;
+      break;
+    case 'flag':
+      styleCSS = `
+        background-image: repeating-linear-gradient(
+          45deg,
+          #BF0A30,
+          #BF0A30 10px,
+          #FFFFFF 10px,
+          #FFFFFF 20px
+        );
+        color: #002868;
+        border-radius: 4px;
+      `;
+      break;
   }
   
   const sizeCSS = size === 'sm' ? 'font-size: 12px; padding: 4px 8px;' : 
