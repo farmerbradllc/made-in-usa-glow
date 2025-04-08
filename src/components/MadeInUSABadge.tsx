@@ -19,7 +19,7 @@ export interface MadeInUSABadgeProps {
   onClick?: () => void;
 }
 
-// Position classes (moved outside components to be accessible by both)
+// Position classes (defined at the module level to be accessible by all components)
 const positionClasses: Record<BadgePosition, string> = {
   'top-left': 'top-2 left-2',
   'top-right': 'top-2 right-2',
