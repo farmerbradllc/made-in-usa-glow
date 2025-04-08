@@ -20,7 +20,7 @@ export interface MadeInUSABadgeProps {
 }
 
 // Position classes (moved outside components to be accessible by both)
-const positionClasses = {
+const positionClasses: Record<BadgePosition, string> = {
   'top-left': 'top-2 left-2',
   'top-right': 'top-2 right-2',
   'bottom-left': 'bottom-2 left-2',
