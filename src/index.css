@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,21 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .usa-badge-shadow {
+    box-shadow: 0 0 15px rgba(191, 10, 48, 0.5);
+  }
+  
+  .usa-stripes-bg {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #BF0A30,
+      #BF0A30 10px,
+      #FFFFFF 10px,
+      #FFFFFF 20px
+    );
   }
 }
