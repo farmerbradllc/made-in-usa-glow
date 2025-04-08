@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
@@ -133,7 +132,7 @@ const IndexContent = () => {
                              badgeConfig.position?.includes('right') ? 'auto' : '50%',
                         right: badgeConfig.position?.includes('right') ? '10px' : 'auto',
                         transform: badgeConfig.position === 'center' ? 'translate(-50%, -50%)' : 'none',
-                      }} />
+                      } as React.CSSProperties} />
                     </div>
                   </div>
                   
